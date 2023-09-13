@@ -121,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/images/'
-STATIC_ROOT = '/home/GroupSync/aakash123.pythonanywhere.com/static'
+STATIC_ROOT = '/home/GroupSync/aakash123.pythonanywhere.com/static/styles'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
