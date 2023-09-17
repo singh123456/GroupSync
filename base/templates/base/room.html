@@ -91,6 +91,7 @@
               {% for message in room_messages %}
                 <div class="thread">
                   <div class="thread__top">
+                      {% if user.is_authenticated %}
                     <div class="thread__author">
                       <a href="{% url 'user-profile' message.user.id %}" class="thread__authorInfo">
                         <div class="avatar avatar--small">
@@ -100,6 +101,7 @@
                       </a>
                       <span class="thread__date">{{message.created|timesince}} ago</span>
                     </div>
+                      {% endif %}
                     {% if request.user == message.user %}
                     <a href="{% url 'delete-message' message.id %}">
                     <div class="thread__delete">
@@ -113,9 +115,11 @@
                   </a>
                     {% endif %}
                   </div>
+                    {% if user.is_authenticated %}
                   <div class="thread__details">
                  {{message.body}}
                   </div>
+                      {% endif %}
                 </div>
               {% endfor %}
               </div>
