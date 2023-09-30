@@ -9,11 +9,6 @@ from django.db.models import Q
 
 from django.contrib.auth import authenticate,login,logout
 
-# rooms=[
-#     {'id':1,'name':'Lets Learn Python'},
-#     {'id':2,'name':'Design with me'},
-#     {'id':3,'name':'Frontend Developers'},
-# ]
 
 def loginPage(request):
     page = 'login'
